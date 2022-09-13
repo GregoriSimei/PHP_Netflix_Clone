@@ -1,4 +1,4 @@
-<form action="router_aux.php" method="post">
+<form action="/client/router_aux.php" method="post">
     <input type="radio" name="page" value="login">
     <label>login</label></br>
 
