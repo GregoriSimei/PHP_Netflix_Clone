@@ -11,6 +11,9 @@
         case "outro":
             include_once(__DIR__."/pages/outro/index.php");
             break;
+        case "registration":
+            include_once(__DIR__."/pages/registration/index.php");
+            break;
         default:
             include_once(__DIR__."/pages/not_found/index.php");
     }
