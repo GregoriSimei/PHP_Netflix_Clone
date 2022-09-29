@@ -1,20 +1,5 @@
 <?php
-include_once('./client/models/user.php');
-
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    include_once('./server/modules/user/useCase');
-    $user = $_POST["user"];
-    $email = $_POST["email"];
-    $pass = $_POST["password"]; 
-
-    $userToCreate = new User();
-    $userToCreate->name = $user;
-    $userToCreate->email = $email;
-    $userToCreate->pass = $pass;
-
-    create_user($userToCreate);
-}
-    
+    include_once("./client/controllers/create_user.php")
 ?>
 
 <div class="registration_banner">
