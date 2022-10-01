@@ -19,6 +19,16 @@
         </form>
         <div class="registration_form_actions">
             <a href='?page=login' style='text-decoration: none; color: white;'>Entrar na conta</a>
+            <?php 
+            if (isset($_SESSION['message'])): ?>
+                <div class="registration_form_actions">
+                    <?php
+                        echo $_SESSION['message']; 
+                        unset($_SESSION['message']);
+                    ?>
+                </div>
+            <?php endif ?>
         </div>
+
     </div>
 </div>

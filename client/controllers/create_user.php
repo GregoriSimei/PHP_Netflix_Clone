@@ -7,11 +7,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = $_POST["email"];
     $pass = $_POST["password"]; 
     
-    $userToCreate = new User();
-    $userToCreate->name = $user;
-    $userToCreate->email = $email;
-    $userToCreate->pass = $pass;
+    $userToCreate = new User(null,$user,$email,$pass);
     
     add_user($userToCreate);
+    
 }
 ?>

@@ -12,6 +12,7 @@
         <div class="login_form_actions">
             <button class="login_form_button">LOGIN</button>
             <a href='?page=registration' style='text-decoration: none; color: white;'>Criar conta</a>
+
         </div>
     </div>
 </div>
