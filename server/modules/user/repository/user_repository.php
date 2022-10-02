@@ -9,9 +9,9 @@
         return $userFound;
     }
 
-    function find_user_by_email_and_password(string $email, string $password) {
+    function find_user_by_email_and_password(string $email, string $passUser) {
         include("./server/database/index.php");
-        $sql = $pdo->query('SELECT * FROM users WHERE email = "'.$email.'" AND pass = "'.$password.'" LIMIT 1');
+        $sql = $pdo->query('SELECT * FROM users WHERE email = "'.$email.'" AND pass = "'.$passUser.'" LIMIT 1');
         $userFound = $sql->fetch();
         return $userFound;
     }
