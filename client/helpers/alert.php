@@ -10,8 +10,8 @@
             <script>
                 setTimeout(
                     function() {
-                        note = document.getElementById('alert_box_".$id."');
-                        note.style.display = 'none';
+                        alert = document.getElementById('alert_box_".$id."');
+                        alert.parentNode.removeChild(alert);
                     },
                     5000
                 );
