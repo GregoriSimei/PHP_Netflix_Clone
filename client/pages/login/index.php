@@ -6,18 +6,27 @@
         $email = $_POST["email"];
         $pass = $_POST["password"];
         
-        $userFound = login_user_controller($email, $pass);
+        if(
+            !empty($email) &&
+            !empty($pass)
+        ) {
+            $userFound = login_user_controller($email, $pass);
 
-        if(!$userFound) {
-            alert_box("Usuário não existe !");
+            if(!$userFound) {
+                alert_box("Usuário não existe !");
+            }
+            else {
+                echo "
+                    <script type='text/javascript'>
+                        window.location = 'http://localhost:3030/?page=home'
+                    </script>
+                ";
+            }
         }
         else {
-            echo "
-                <script type='text/javascript'>
-                    window.location = 'http://localhost:3030/?page=home'
-                </script>
-            ";
+            alert_box("Preencha os campos corretamente !");
         }
+        
     }
 ?>
 

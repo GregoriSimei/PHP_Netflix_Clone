@@ -5,21 +5,31 @@
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $user = $_POST["user"];
         $email = $_POST["email"];
-        $pass = $_POST["password"]; 
-        
-        $userToCreate = new User();
-        $userToCreate->name = $user;
-        $userToCreate->email = $email;
-        $userToCreate->pass = $pass;
-        
-        $userCreated = create_user_controller($userToCreate);
+        $pass = $_POST["password"];
 
-        if(!$userCreated) {
-            alert_box("Usuário já existe !");
+        if (
+            !empty($user) &&
+            !empty($email) &&
+            !empty($pass)
+        ) {
+            $userToCreate = new User();
+            $userToCreate->name = $user;
+            $userToCreate->email = $email;
+            $userToCreate->pass = $pass;
+            
+            $userCreated = create_user_controller($userToCreate);
+
+            if(!$userCreated) {
+                alert_box("Usuário já existe !");
+            }
+            else {
+                alert_box("Usuário criado com sucesso !");
+            }
         }
         else {
-            alert_box("Usuário criado com sucesso !");
+            alert_box("Preencha os campos corretamente !");
         }
+    
     }
 ?>
 
