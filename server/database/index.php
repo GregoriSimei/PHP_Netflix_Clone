@@ -6,12 +6,6 @@
 
     $dbname = "`".str_replace("`","``",$database)."`";
     $pdo->query("CREATE DATABASE IF NOT EXISTS $dbname");
+
     $pdo->query("use $dbname");
-    $pdo->query("CREATE TABLE IF NOT EXISTS users (
-        id int AUTO_INCREMENT NOT NULL,
-        user varchar(255),
-        email varchar(255),
-        pass varchar(255),
-        PRIMARY KEY (id)
-    )");
 ?>
