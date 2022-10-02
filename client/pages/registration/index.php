@@ -1,5 +1,26 @@
 <?php
-    include_once("./client/controllers/create_user.php")
+    include_once("./client/controllers/create_user.php");
+    include_once("./client/helpers/alert.php");
+
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        $user = $_POST["user"];
+        $email = $_POST["email"];
+        $pass = $_POST["password"]; 
+        
+        $userToCreate = new User();
+        $userToCreate->name = $user;
+        $userToCreate->email = $email;
+        $userToCreate->pass = $pass;
+        
+        $userCreated = create_user_controller($userToCreate);
+
+        if(!$userCreated) {
+            alert_box("Usuário já existe !");
+        }
+        else {
+            alert_box("Usuário criado com sucesso !");
+        }
+    }
 ?>
 
 <div class="registration_banner">

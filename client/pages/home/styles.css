@@ -1,0 +1,21 @@
+.home_container {
+    width: 100vw;
+    height: 100vh;
+}
+
+.home_line_banners {
+    width: 100vw;
+    height: 150px;
+}
+
+.home_banner {
+    height: 100%;
+    width: 260px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.home_banner_img {
+    height: 100%;
+    width: 100%;
+}
