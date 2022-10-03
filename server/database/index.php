@@ -14,4 +14,13 @@
         pass varchar(255),
         PRIMARY KEY (id)
     )");
+
+$pdo->query("CREATE TABLE IF NOT EXISTS movies (
+    id int AUTO_INCREMENT NOT NULL,
+    name varchar(255),
+    genre varchar(255),
+    age_restric int(5),
+    release_date varchar(255),
+    PRIMARY KEY (id)
+)");
 ?>
