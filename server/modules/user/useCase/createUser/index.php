@@ -10,4 +10,14 @@
 
         return null;
     }
+    function select_all_users(){
+        return list_all_users();
+    }
+    function funcaobesta(){
+        echo "funcaobesta";
+    }
+    function select_user_by_id($id){
+        echo "chegou aqui";
+        return select_user($id);
+    }
 ?>

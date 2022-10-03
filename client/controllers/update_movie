@@ -1,0 +1,7 @@
+<?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {     
+    // perform update here
+    $id = $_POST['id'];
+    echo "tchacaprei ";
+}   include_once("client\pages\movie\edit_movie.php");
+?>

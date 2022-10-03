@@ -1,4 +1,4 @@
-.login_banner {
+.registration_banner {
     width: 100%;
     height: 100%;
     position: absolute;
@@ -8,25 +8,15 @@
     justify-content: center;
     align-items: center;
 }
-.msg {
-    margin: 30px auto; 
-    padding: 10px; 
-    border-radius: 5px; 
-    color: #3c763d; 
-    background: #dff0d8; 
-    border: 1px solid #3c763d;
-    width: 50%;
-    text-align: center;
-}
 
-.login_banner_filter {
+.registration_banner_filter {
     background: rgba(0, 0, 0, 0.5);
     width: 100%;
     height: 100%;
     position: absolute;
 }
 
-.login_div_form {
+.registration_div_form {
     height: 50vh;
     width: 300px;
     background: rgba(0, 0, 0, 0.8);
@@ -39,7 +29,7 @@
     border-radius: 5px;
 }
 
-.login_form {
+.registration_form {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -47,7 +37,7 @@
     align-items: center;
 }
 
-.login_form_button {
+.registration_form_button {
     width: 103%;
     position: relative;
     left: -1px;
@@ -59,7 +49,7 @@
     border-radius: 5px;
 }
 
-.login_form_title {
+.registration_form_title {
     font-size: 30px;
     color: white;
     font-weight: bold;
@@ -68,7 +58,7 @@
     width: 100%;
 } 
 
-.login_form_input {
+.registration_form_input {
     width: 100%;
     height: 40px;
     border: none;
@@ -77,7 +67,7 @@
     padding-left: 10px;
 }
 
-.login_form_actions {
+.registration_form_actions {
     width: 100%;
     color: white;
     display: flex;
@@ -87,12 +77,12 @@
     padding: 0px;
 }
 
-.login_form_actions a {
+.registration_form_actions a {
     margin: 10px;
     cursor: pointer;
 }
 
-.login_form_input:focus {
+.registration_form_input:focus {
     border: solid rgb(218, 141, 0);
     border-left: 0px;
     border-right: 0px;
@@ -100,7 +90,7 @@
     outline: none;
 }
 
-.login_div_spacer {
+.registration_div_spacer {
     width: 100%;
     height: 40px;
 }

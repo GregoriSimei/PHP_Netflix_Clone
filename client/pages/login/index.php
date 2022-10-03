@@ -45,6 +45,7 @@
         </form>
         <div class="login_form_actions">
             <a href='?page=registration' style='text-decoration: none; color: white;'>Criar conta</a>
+
         </div>
     </div>
 </div>
