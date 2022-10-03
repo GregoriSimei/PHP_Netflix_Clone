@@ -18,7 +18,7 @@
             else {
                 echo "
                     <script type='text/javascript'>
-                        window.location = 'http://localhost:3030/?page=home'
+                        window.location = 'http://localhost/netflix/?page=home'
                     </script>
                 ";
             }
