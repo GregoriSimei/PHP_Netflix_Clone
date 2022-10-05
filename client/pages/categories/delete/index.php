@@ -1,22 +1,21 @@
 <?php
-    include("./client/controllers/users/get_user.php");
-    include("./client/controllers/users/delete_user.php");
+    include("./client/controllers/categories/get_category.php");
+    include("./client/controllers/categoryies/delete_category.php");
 
     $id = $_GET['id'];
-    $userFound = null;
+    $categoryFound = null;
 
     if(isset($id)) {
-        $userFound = get_users_controller($id);
+        $categoryFound = get_category_controller($id);
     }
 
-    if($userFound != null) {
+    if($categoryFound != null) {
 
 ?>
     <h1>Categoria excluida</h1>
-    <b>User: </b> <?php echo $userFound["user"] ?>
-    <b>Email: </b> <?php echo $userFound["email"] ?>
-    <b>Pass: </b> <?php echo $userFound["pass"] ?>
+    <b>Nome: </b> <?php echo $categoryFound["name"] ?>
+    <b>Descrição: </b> <?php echo $categoryFound["description"] ?>
 <?php 
-        delete_user_controller($id);
+        delete_category_controller($id);
     }
 ?>

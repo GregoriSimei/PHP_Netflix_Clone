@@ -1,27 +1,24 @@
 <?php
-    include("./client/controllers/users/get_user.php");
-    include("./client/controllers/users/update_user.php");
+    include("./client/controllers/categories/get_category.php");
+    include("./client/controllers/categories/update_category.php");
     include("./client/helpers/alert.php");
 
     $id = $_GET['id'];
-    $userFound = null;
+    $categoryFound = null;
 
     if(isset($id)) {
-        $userFound = get_users_controller($id);
+        $categoryFound = get_category_controller($id);
     }
 
-    if($userFound != null) {
+    if($categoryFound != null) {
 
 ?>
-    <form method="post" name="user_teste">
-        <label>User</label>
-        <input type="text" name="user" placeholder="<?php echo $userFound["user"] ?>"/>
+    <form method="post" name="category_teste">
+        <label>Name</label>
+        <input type="text" name="name" placeholder="<?php echo $categoryFound["name"] ?>"/>
 
-        <label>User</label>
-        <input type="email" name="email" placeholder="<?php echo $userFound["email"] ?>"/>
-
-        <label>User</label>
-        <input type="password" name="password" placeholder="<?php echo $userFound["pass"] ?>"/>
+        <label>Description</label>
+        <input type="text" name="description" placeholder="<?php echo $categoryFound["description"] ?>"/>
 
         <input value="Atualizar" type="submit"/>
     </form>
@@ -31,28 +28,25 @@
 
 <?php
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        $user = $_POST["user"];
-        $email = $_POST["email"];
-        $pass = $_POST["password"];
+        $name = $_POST["name"];
+        $description = $_POST["description"];
 
         if (
-            !empty($user) &&
-            !empty($email) &&
-            !empty($pass)
+            !empty($name) &&
+            !empty($description)
         ) {
-            $userToUpdate = new User();
-            $userToUpdate->id = $id;
-            $userToUpdate->user = $user;
-            $userToUpdate->email = $email;
-            $userToUpdate->pass = $pass;
+            $categoryToUpdate = new Category();
+            $categoryToUpdate->categoryId = $id;
+            $categoryToUpdate->name = $name;
+            $categoryToUpdate->description = $description;
             
-            $userCreated = update_user_controller($userToUpdate);
+            $categoryCreated = update_category_controller($categoryToUpdate);
 
-            if(!$userCreated) {
-                alert_box("Usuário não existe !");
+            if(!$categoryCreated) {
+                alert_box("Categoria não existe !");
             }
             else {
-                alert_box("Usuário alterado com sucesso !");
+                alert_box("Categoria alterada com sucesso !");
             }
         }
         else {

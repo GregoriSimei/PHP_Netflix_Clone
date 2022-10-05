@@ -1,31 +1,29 @@
 <?php
-    include('./client/controllers/users/get_user.php');
+    include('./client/controllers/categories/get_category.php');
 
-    $usersFound = get_users_controller(null);
+    $categoriesFound = get_category_controller(null);
 ?>
 
 <table>
     <tr>
         <th>ID</th>
-        <th>USER</th>
-        <th>EMAIL</th>
-        <th>PASS</th>
+        <th>NAME</th>
+        <th>DESCRIPTION</th>
     </tr>
     
     <?php 
-        if(!empty($usersFound)) {
-            foreach ($usersFound as $user) {
+        if(!empty($categoriesFound)) {
+            foreach ($categoriesFound as $category) {
     ?>
         <tr>
-            <td><?php echo $user["id"] ?></td>
-            <td><?php echo $user["user"] ?></td>
-            <td><?php echo $user["email"] ?></td>
-            <td><?php echo $user["pass"] ?></td>
+            <td><?php echo $category["categoryId"] ?></td>
+            <td><?php echo $category["name"] ?></td>
+            <td><?php echo $category["description"] ?></td>
             <td>
-                <a href="?page=deletar_user&id=<?php echo $user["id"] ?>">Deletar</a>
+                <a href="?page=deletar_category&id=<?php echo $category["categoryId"] ?>">Deletar</a>
             </td>
             <td>
-                <a href="?page=alterar_user&id=<?php echo $user["id"] ?>">Alterar</a>
+                <a href="?page=alterar_category&id=<?php echo $category["categoryId"] ?>">Alterar</a>
             </td>
         </tr>
     <?php 

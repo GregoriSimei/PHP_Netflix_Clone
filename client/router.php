@@ -20,6 +20,9 @@
         case "alterar_user":
             include_once("./client/pages/users/update/index.php");
             break;
+        case "category_list":
+            include_once("./client/pages/categories/list/index.php");
+            break;
         default:
             include_once(__DIR__."/pages/not_found/index.php");
     }
