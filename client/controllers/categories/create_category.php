@@ -1,9 +1,9 @@
 <?php
-include_once('./server/modules/user/model/user.php');
-include('./server/modules/user/useCase/createUser/index.php');
+include_once('./server/modules/categories/model/category.php');
+include('./server/modules/categories/useCase/createUser/index.php');
 
-function create_user_controller(User $user) {
-    return add_user($user);
+function create_category_controller(Category $category) {
+    return add_category($category);
 }
 
 ?>

@@ -1,7 +1,7 @@
 <?php 
-    include_once('./server/modules/user/repository/user_repository.php');
+    include_once('./server/modules/categories/repository/category_repository.php');
 
-    function get_users(?int $id) {
+    function get_category(?int $id) {
         $result = null;
 
         if ($id != null) {

@@ -1,7 +1,7 @@
 <?php
-include('./server/modules/user/useCase/removeUser/index.php');
+include('./server/modules/categories/useCase/removeUser/index.php');
 
-function delete_user_controller(int $id) {
+function delete_category_controller(int $id) {
     return removeUser($id);
 }
 
