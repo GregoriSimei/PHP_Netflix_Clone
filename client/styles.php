@@ -1,8 +1,8 @@
 <style>
     <?php 
-        include_once(__DIR__."/pages/home/styles.css");
-        include_once(__DIR__."/pages/login/styles.css");
-        include_once(__DIR__."/pages/registration/styles.css");
-        include_once(__DIR__."/helpers/styles.css")
+        include(__DIR__."/pages/home/styles.css");
+        include(__DIR__."/pages/users/login/styles.css");
+        include(__DIR__."/pages/users/registration/styles.css");
+        include(__DIR__."/helpers/styles.css")
     ?>
 </style>

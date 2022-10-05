@@ -1,8 +1,4 @@
 <div class="home_container">
-    <a href="?page=users">Usuários</a>
-    <a href="?page=films">Filmes</a>
-    <a href="?page=categories">Categorias</a>
-
     <!-- <div class="home_line_banners">
         <?php
             echo "

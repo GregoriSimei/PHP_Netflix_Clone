@@ -1,6 +1,6 @@
 <?php
-    include_once("./client/controllers/login_user.php");
-    include_once("./client/helpers/alert.php");
+    include("./client/controllers/users/login_user.php");
+    include("./client/helpers/alert.php");
 
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $email = $_POST["email"];

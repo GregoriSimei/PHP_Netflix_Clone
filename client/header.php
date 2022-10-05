@@ -1,5 +1,16 @@
-<div style="position: absolute;">
-    <a href='?page=login' >login</a> 
-    <a href='?page=outro' >outro</a>
-    <a href='?page=home' >home</a>
+<?php 
+    if(isset($_GET["page"])) {
+        if(
+            $_GET["page"] != "login" &&
+            $_GET["page"] != "registration"
+        ) {
+?>
+<div>
+    <a href="?page=user_list">Usuários</a>
+    <a href="?page=films">Filmes</a>
+    <a href="?page=categories">Categorias</a>
 </div>
+<?php 
+        }
+    }
+?>

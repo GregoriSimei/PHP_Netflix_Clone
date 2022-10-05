@@ -5,7 +5,7 @@
         $userFound = find_user_by_email($user->email);
 
         if (!$userFound) {
-            return create_user($user);
+            return create($user);
         }
 
         return null;

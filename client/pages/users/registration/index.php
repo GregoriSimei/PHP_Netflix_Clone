@@ -1,6 +1,6 @@
 <?php
-    include_once("./client/controllers/create_user.php");
-    include_once("./client/helpers/alert.php");
+    include("./client/controllers/users/create_user.php");
+    include("./client/helpers/alert.php");
 
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $user = $_POST["user"];
@@ -13,7 +13,7 @@
             !empty($pass)
         ) {
             $userToCreate = new User();
-            $userToCreate->name = $user;
+            $userToCreate->user = $user;
             $userToCreate->email = $email;
             $userToCreate->pass = $pass;
             
