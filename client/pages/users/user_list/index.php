@@ -24,7 +24,9 @@
             <td>
                 <a href="?page=deletar_user&id=<?php echo $user["id"] ?>">Deletar</a>
             </td>
-            <td>Alterar</td>
+            <td>
+                <a href="?page=alterar_user&id=<?php echo $user["id"] ?>">Alterar</a>
+            </td>
         </tr>
     <?php 
             }

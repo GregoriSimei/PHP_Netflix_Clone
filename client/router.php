@@ -17,6 +17,9 @@
         case "deletar_user":
             include_once("./client/pages/users/delete/index.php");
             break;
+        case "alterar_user":
+            include_once("./client/pages/users/update/index.php");
+            break;
         default:
             include_once(__DIR__."/pages/not_found/index.php");
     }
