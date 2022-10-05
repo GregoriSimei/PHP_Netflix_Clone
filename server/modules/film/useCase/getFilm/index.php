@@ -1,7 +1,7 @@
 <?php 
-    include_once('./server/modules/user/repository/user_repository.php');
+    include_once('./server/modules/film/repository/film_repository.php');
 
-    function get_users(?int $id) {
+    function get_films(?int $id) {
         $result = null;
 
         if ($id != null) {

@@ -1,9 +1,9 @@
 <?php
-include_once('./server/modules/user/model/user.php');
-include('./server/modules/user/useCase/createUser/index.php');
+include_once('./server/modules/film/model/film.php');
+include('./server/modules/film/useCase/createFilm/index.php');
 
-function create_user_controller(User $user) {
-    return add_user($user);
+function create_film_controller(Film $film) {
+    return add_film($film);
 }
 
 ?>
