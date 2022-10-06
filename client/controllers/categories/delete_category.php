@@ -1,8 +1,8 @@
 <?php
-include('./server/modules/categories/useCase/removeUser/index.php');
+include('./server/modules/categories/useCase/removeCategories/index.php');
 
 function delete_category_controller(int $id) {
-    return removeUser($id);
+    return removeCategory($id);
 }
 
 ?>

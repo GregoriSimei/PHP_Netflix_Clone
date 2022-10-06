@@ -1,6 +1,6 @@
 <?php
     include("./client/controllers/categories/get_category.php");
-    include("./client/controllers/categoryies/delete_category.php");
+    include("./client/controllers/categories/delete_category.php");
 
     $id = $_GET['id'];
     $categoryFound = null;

@@ -25,6 +25,12 @@
             break;
         case "criar_category":
             include_once("./client/pages/categories/create/index.php");
+        case "deletar_category":
+            include_once("./client/pages/categories/delete/index.php");
+            break;
+        case "alterar_category":
+            include_once("./client/pages/categories/update/index.php");
+            break;
         case "film_list":
             include_once("./client/pages/films/film_list/index.php");
             break;
