@@ -6,9 +6,9 @@
         ) {
 ?>
 <div>
-    <a href="?page=user_list">Usuários</a>
-    <a href="?page=films">Filmes</a>
-    <a href="?page=category_list">Categorias</a>
+    <a href="?page=user_list">Usuários</a> |
+    <a href="?page=category_list">Categorias</a> |
+    <a href="?page=film_list">Filmes</a>
 </div>
 <?php 
         }

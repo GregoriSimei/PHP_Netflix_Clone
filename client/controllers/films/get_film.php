@@ -1,7 +1,7 @@
 <?php
-    include('./server/modules/user/useCase/getUser/index.php');
+    include('./server/modules/film/useCase/getFilm/index.php');
 
-    function get_users_controller(?int $id) {
-        return get_users($id);
+    function get_films_controller(?int $id) {
+        return get_films($id);
     }
 ?>

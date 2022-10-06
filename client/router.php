@@ -25,6 +25,17 @@
             break;
         case "criar_category":
             include_once("./client/pages/categories/create/index.php");
+        case "film_list":
+            include_once("./client/pages/films/film_list/index.php");
+            break;
+        case "deletar_film":
+            include_once("./client/pages/films/delete/index.php");
+            break;
+        case "alterar_film":
+            include_once("./client/pages/films/update/index.php");
+            break;
+        case "include_film":
+            include_once(__DIR__."/pages/films/registration/index.php");
             break;
         default:
             include_once(__DIR__."/pages/not_found/index.php");
