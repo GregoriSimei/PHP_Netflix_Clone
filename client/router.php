@@ -23,6 +23,9 @@
         case "category_list":
             include_once("./client/pages/categories/list/index.php");
             break;
+        case "criar_category":
+            include_once("./client/pages/categories/create/index.php");
+            break;
         default:
             include_once(__DIR__."/pages/not_found/index.php");
     }

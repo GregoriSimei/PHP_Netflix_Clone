@@ -4,6 +4,10 @@
     $categoriesFound = get_category_controller(null);
 ?>
 
+<br>
+<a href="?page=criar_category">Criar Categoria</a>
+<br><br>
+
 <table>
     <tr>
         <th>ID</th>
